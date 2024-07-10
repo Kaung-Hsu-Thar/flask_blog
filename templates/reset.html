@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/reset.css" />
+    <title>Forgot password</title>
+    
+</head>
+<body>
+  <div class="wrapper">
+    <a href="{{ url_for('frontpage') }}" type="button" class="close" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+     
+   </a>
+   <form method="post">
+    {{ reset_form.hidden_tag() }}
+      <h2>Reset Your Password</h2>
+      <div class="input-field">
+        {{ reset_form.npass }}
+        <span></span>
+        <label>New Password</label>
+        <i class="eye-icon" id="togglePassword"></i>
+      </div>
+      <div class="input-field">
+        {{ reset_form.cpass }}
+        <span></span>
+        <label>Comfirm Password</label>
+        <i class="eye-icon" id="togglePassword"></i>
+      </div>
+      <div>{{ reset_form.submit }}</div>
+      <div class="Signup_link">
+        Go Back To <a href="{{ url_for('login') }}">Login</a>
+      </div>
+    </form>
+  </div>
+ 
+</body>
+</html>
